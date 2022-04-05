@@ -6,6 +6,7 @@ const resolve = (dir) => path.join(__dirname, dir);
 const projectName = 'Tse-vue-next-demo'
 
 module.exports = defineConfig({
+    runtimeCompiler: true,
     // 默认情况下 babel-loader 会忽略所有 node_modules 中的文件。
     // 你可以启用本选项，以避免构建后的代码中出现未转译的第三方依赖
     transpileDependencies: true,
@@ -19,7 +20,7 @@ module.exports = defineConfig({
         name: projectName,
         resolve: {
             alias: {
-                '@': resolve('src')
+                '@': resolve('src'),
             },
             extensions: ['.js', '.vue', '.json', '.ts'],
         },
@@ -41,4 +42,28 @@ module.exports = defineConfig({
             ],
         },
     },
+    chainWebpack: config => {
+        config.module
+            .rule('vue')
+            .use('vue-loader')
+            .tap(options => {
+                options.compilerOptions = {
+                    ...options.compilerOptions,
+                    isCustomElement: tag => {
+                        tag.startsWith('define-')
+                    }
+                }
+                return options
+            })
+    },
+    // css: {
+    //     // 默认情况下，只有 *.module.[ext] 结尾的文件才会被视作 CSS Modules 模块。
+    //     // 设置为 false 后你就可以去掉文件名中的 .module 并将所有的 *.(css|scss|sass|less|styl(us)?)
+    //     // 文件视为 CSS Modules 模块。
+    //     requireModuleExtension: true,
+    // },
+    // 是否为 Babel 或 TypeScript 使用 thread-loader
+    // 该选项在系统的 CPU 有多于一个内核时自动启用，仅作用于生产构建。
+    parallel: require('os').cpus().length > 1,
+
 })
