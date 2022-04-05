@@ -31,6 +31,11 @@
 <script>
 export default {
     name: 'TseClock',
+    data() {
+        return {
+            timer: null,
+        }
+    },
     mounted() {
         this.init();
     },
@@ -63,7 +68,7 @@ export default {
             minutes.innerHTML = m.toString().padStart(2, '0');
             seconds.innerHTML = s.toString().padStart(2, '0');
             ampm.innerHTML = am;
-            setTimeout(() => {
+            this.timer = setTimeout(() => {
                 this.init();
             }, 1000)
         },
@@ -118,6 +123,7 @@ export default {
             color: #fff;
             text-align: center;
             transform: rotate(calc(30deg * var(--i)));
+            user-select: none;
             b{
                 font-size: 2em;
                 opacity: 0.25;
