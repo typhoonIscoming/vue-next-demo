@@ -4,7 +4,8 @@
             <TseDeleteButton />
         </div>
         <div class="BowlContainer">
-            <TseLightingBowl />
+            <!-- <TseLightingBowl /> -->
+            <TseFingerScanning />
         </div>
     </div>
 </template>
@@ -12,10 +13,11 @@
 <script>
 import TseDeleteButton from '@/components/deleteBtn.vue';
 import TseLightingBowl from '@/components/lightingBowl.vue';
+import TseFingerScanning from '@/components/FingerScanning.vue';
 
 export default {
     components: {
-        TseDeleteButton, TseLightingBowl,
+        TseDeleteButton, TseLightingBowl, TseFingerScanning,
     },
 }
 </script>
