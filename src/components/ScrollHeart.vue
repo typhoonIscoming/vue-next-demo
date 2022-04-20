@@ -13,9 +13,7 @@ export default {
         const bg = document.querySelector('.bg');
         container.addEventListener('scroll', (e) => {
             const scrollY = e.target.scrollTop;
-            console.log('e', scrollY)
-            bg.style.backgroundSize = 100 + scrollY * 2 + 'px';
-            bg.style.top = scrollY + 'px';
+            bg.style.backgroundSize = 0 + scrollY * 2 + 'px';
         })
     },
 }
@@ -31,20 +29,21 @@ export default {
     background-size: cover;
     background-position: center;
     position: relative;
+    -webkit-overflow-scrolling: touch;
     .content{
         height: 100vh;
         width: 100%;
         position: absolute;
     }
     .bg{
-        position: absolute;
-        top: -40px;
+        position: sticky;
+        top: 0;
         left: 0;
         width: 100%;
-        height: 120%;
-        background: #fff url('~@/assets/scrollHeart/heart.svg')no-repeat;
+        height: 100%;
+        background: #3fefef url('~@/assets/scrollHeart/heart.svg')no-repeat;
         background-position: center;
-        background-size: 100px;
+        background-size: 0px;
         mix-blend-mode: screen; /* mix-blend-mode 属性描述了元素的内容需要与父元素的背景颜色进行混合 */
     }
 }
