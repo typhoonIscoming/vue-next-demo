@@ -1,5 +1,6 @@
 const path = require('path');
 const { defineConfig } = require('@vue/cli-service');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const resolve = (dir) => path.join(__dirname, dir);
 
@@ -12,10 +13,11 @@ module.exports = defineConfig({
     transpileDependencies: true,
     // 部署应用包时的基本 URL。用法和 webpack 本身的 output.publicPath 一致
     // 但是 Vue CLI 在一些其他地方也需要用到这个值
-    publicPath: process.env.NODE_ENV === 'development' ? '/' : '',
+    publicPath: process.env.NODE_ENV === 'development' ? './' : '',
     // 如果你不需要生产环境的 source map，可以将其设置为 false 以加速生产环境构建
     productionSourceMap: false,
     outputDir: 'dist',
+    assetsDir: 'static',
     configureWebpack: {
         name: projectName,
         resolve: {
@@ -41,6 +43,14 @@ module.exports = defineConfig({
                 },
             ],
         },
+        plugins: [
+            new CopyWebpackPlugin({
+                patterns:[{
+                    from: resolve('static'),
+                    to: 'static'
+                }]
+            }),
+        ]
     },
     chainWebpack: config => {
         config.module
