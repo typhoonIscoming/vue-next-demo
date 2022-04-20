@@ -7,6 +7,9 @@
             <!-- <TseLightingBowl /> -->
             <TseFingerScanning />
         </div>
+        <div class="ScrollHeartContainer">
+            <TseScrollHeart />
+        </div>
     </div>
 </template>
 
@@ -14,10 +17,11 @@
 import TseDeleteButton from '@/components/deleteBtn.vue';
 import TseLightingBowl from '@/components/lightingBowl.vue';
 import TseFingerScanning from '@/components/FingerScanning.vue';
+import TseScrollHeart from '@/components/ScrollHeart.vue';
 
 export default {
     components: {
-        TseDeleteButton, TseLightingBowl, TseFingerScanning,
+        TseDeleteButton, TseLightingBowl, TseFingerScanning, TseScrollHeart,
     },
 }
 </script>
@@ -35,6 +39,9 @@ export default {
         padding: 20px;
         background-color: #121212;
         justify-content: center;
+    }
+    .ScrollHeartContainer{
+        overflow: hidden;
     }
 }
 </style>
