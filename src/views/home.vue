@@ -3,15 +3,19 @@
         <div class="DeleteContainer">
             <TseDeleteButton />
         </div>
+        <div class="BowlContainer">
+            <TseLightingBowl />
+        </div>
     </div>
 </template>
 
 <script>
 import TseDeleteButton from '@/components/deleteBtn.vue';
+import TseLightingBowl from '@/components/lightingBowl.vue';
 
 export default {
     components: {
-        TseDeleteButton,
+        TseDeleteButton, TseLightingBowl,
     },
 }
 </script>
@@ -22,6 +26,12 @@ export default {
     .DeleteContainer{
         padding: 10px;
         display: flex;
+        justify-content: center;
+    }
+    .BowlContainer{
+        display: flex;
+        padding: 20px;
+        background-color: #121212;
         justify-content: center;
     }
 }
