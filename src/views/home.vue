@@ -10,6 +10,7 @@
         <div class="ScrollHeartContainer">
             <TseScrollHeart />
         </div>
+        <TseHeartFallowMouse />
     </div>
 </template>
 
@@ -18,10 +19,11 @@ import TseDeleteButton from '@/components/deleteBtn.vue';
 import TseLightingBowl from '@/components/lightingBowl.vue';
 import TseFingerScanning from '@/components/FingerScanning.vue';
 import TseScrollHeart from '@/components/ScrollHeart.vue';
+import TseHeartFallowMouse from '@/components/HeartFallowMouse.vue';
 
 export default {
     components: {
-        TseDeleteButton, TseLightingBowl, TseFingerScanning, TseScrollHeart,
+        TseDeleteButton, TseLightingBowl, TseFingerScanning, TseScrollHeart, TseHeartFallowMouse,
     },
 }
 </script>

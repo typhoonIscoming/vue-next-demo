@@ -16,6 +16,10 @@ export default {
             bg.style.backgroundSize = 0 + scrollY * 2 + 'px';
         })
     },
+    beforeUnmount() {
+        const container = document.querySelector('.ScrollHeart');
+        container.removeEventListener('scroll', () => {})
+    },
 }
 </script>
 
