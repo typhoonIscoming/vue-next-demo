@@ -1,6 +1,8 @@
 <template>
     <div class="Main">
-        show component
+        <div class="menu">
+            <router-link to="/home" class="menuItem">Go Home</router-link>
+        </div>
         <TseClock />
 
         <TseCircle />
@@ -10,6 +12,7 @@
 <script>
 import TseClock from '@/components/clock.vue';
 import TseCircle from '@/components/circle.vue';
+
 
 export default {
     name: 'Main',
@@ -35,5 +38,8 @@ export default {
 .Main{
     height: 100%;
     background: #2f363e;
+    .menu{
+        background: white;
+    }
 }
 </style>

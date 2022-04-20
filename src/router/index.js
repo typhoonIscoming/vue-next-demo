@@ -16,6 +16,10 @@ const router = createRouter({
             path: '/main',
             component: () => import(/* webpackChunkName: "main" */ '@/views/main'),
         },
+        {
+            path: '/home',
+            component: () => import(/* webpackChunkName: "home" */ '@/views/home'),
+        },
     ],
 })
 

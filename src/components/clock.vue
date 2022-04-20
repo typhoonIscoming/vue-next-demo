@@ -20,9 +20,9 @@
         </div>
 
         <div id="time">
-            <div id="hours" style="--clr:#04fc43">00</div>
+            <div id="hours" style="--clr:#ff2972">00</div>
             <div id="minutes" style="--clr:#fee800">00</div>
-            <div id="seconds" style="--clr:#ff2972">00</div>
+            <div id="seconds" style="--clr:#04fc43">00</div>
             <div id="ampm">00</div>
         </div>
     </div>

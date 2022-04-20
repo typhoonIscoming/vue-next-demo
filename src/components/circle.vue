@@ -2,13 +2,15 @@
 export default {
     name: 'TseCircle',
     render() {
-        return <div>
+        return <div class="circle">
             Circle
         </div>
     },
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.circle{
+    color: white;
+}
 </style>
