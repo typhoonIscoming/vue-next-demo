@@ -39,6 +39,9 @@ export default {
     mounted() {
         this.init();
     },
+    beforeUnmount() {
+        clearTimeout(this.timer)
+    },
     methods: {
         init() {
             let hr = document.querySelector('#hr');

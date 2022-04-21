@@ -1,8 +1,5 @@
 <template>
     <div class="Main">
-        <div class="menu">
-            <router-link to="/home" class="menuItem">Go Home</router-link>
-        </div>
         <TseClock />
 
         <TseCircle />
@@ -20,16 +17,16 @@ export default {
         TseClock, TseCircle,
     },
     mounted() {
-        class ComponentCard extends HTMLElement{
-            constructor() {
-                super();
-                var container = document.createElement('div');
-                container.classList.add('container');
+        // class ComponentCard extends HTMLElement{
+        //     constructor() {
+        //         super();
+        //         var container = document.createElement('div');
+        //         container.classList.add('container');
 
-                this.appendChild(container)
-            }
-        }
-        window.customElements.define('define-component-card', ComponentCard)
+        //         this.appendChild(container)
+        //     }
+        // }
+        // window.customElements.define('define-component-card', ComponentCard)
     },
 }
 </script>
