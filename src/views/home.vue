@@ -13,6 +13,7 @@
         <div class="row">
             <TseLiquidDestortedImage />
             <TseClipPath />
+            <TseEyesFallowMouse />
         </div>
         <TseHeartFallowMouse />
     </div>
@@ -26,11 +27,12 @@ import TseScrollHeart from '@/components/ScrollHeart.vue';
 import TseHeartFallowMouse from '@/components/HeartFallowMouse.vue';
 import TseLiquidDestortedImage from '@/components/LiquidDestortedImage.vue';
 import TseClipPath from '@/components/ClipPath.vue';
+import TseEyesFallowMouse from '@/components/EyesFallowMouse.vue';
 
 export default {
     components: {
         TseDeleteButton, TseLightingBowl, TseFingerScanning, TseScrollHeart, TseHeartFallowMouse,
-        TseLiquidDestortedImage, TseClipPath,
+        TseLiquidDestortedImage, TseClipPath, TseEyesFallowMouse,
     },
 }
 </script>
