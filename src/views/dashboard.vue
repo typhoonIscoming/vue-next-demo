@@ -2,6 +2,7 @@
     <div class="Dashboard">
         <div class="row">
             <TseChangeImageColor />
+            <TseMagicMenu />
         </div>
         Dashboard
     </div>
@@ -9,11 +10,12 @@
 
 <script>
 import TseChangeImageColor from '@/components/ChangeImageColor.vue';
+import TseMagicMenu from '@/components/MagicMenu.vue';
 
 export default {
     name: 'Dashboard',
     components: {
-        TseChangeImageColor,
+        TseChangeImageColor, TseMagicMenu,
     },
 }
 </script>
@@ -24,6 +26,7 @@ export default {
     .row{
         display: flex;
         padding: 10px;
+        gap: 20px;
     }
 }
 </style>
