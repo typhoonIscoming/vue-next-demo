@@ -20,6 +20,10 @@ const router = createRouter({
             path: '/home',
             component: () => import(/* webpackChunkName: "home" */ '@/views/home'),
         },
+        {
+            path: '/dashboard',
+            component: () => import(/* webpackChunkName: "dashboard" */ '@/views/dashboard'),
+        },
     ],
 })
 
