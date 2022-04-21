@@ -3,6 +3,7 @@
         <div class="DeleteContainer">
             <TseDeleteButton />
         </div>
+        <TseStarrySky />
         <div class="BowlContainer">
             <!-- <TseLightingBowl /> -->
             <TseFingerScanning />
@@ -28,11 +29,12 @@ import TseHeartFallowMouse from '@/components/HeartFallowMouse.vue';
 import TseLiquidDestortedImage from '@/components/LiquidDestortedImage.vue';
 import TseClipPath from '@/components/ClipPath.vue';
 import TseEyesFallowMouse from '@/components/EyesFallowMouse.vue';
+import TseStarrySky from '@/components/StarrySky.vue';
 
 export default {
     components: {
         TseDeleteButton, TseLightingBowl, TseFingerScanning, TseScrollHeart, TseHeartFallowMouse,
-        TseLiquidDestortedImage, TseClipPath, TseEyesFallowMouse,
+        TseLiquidDestortedImage, TseClipPath, TseEyesFallowMouse, TseStarrySky,
     },
 }
 </script>
