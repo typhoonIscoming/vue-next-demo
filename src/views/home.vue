@@ -10,7 +10,10 @@
         <div class="ScrollHeartContainer">
             <TseScrollHeart />
         </div>
-        <TseLiquidDestortedImage />
+        <div class="row">
+            <TseLiquidDestortedImage />
+            <TseClipPath />
+        </div>
         <TseHeartFallowMouse />
     </div>
 </template>
@@ -22,11 +25,12 @@ import TseFingerScanning from '@/components/FingerScanning.vue';
 import TseScrollHeart from '@/components/ScrollHeart.vue';
 import TseHeartFallowMouse from '@/components/HeartFallowMouse.vue';
 import TseLiquidDestortedImage from '@/components/LiquidDestortedImage.vue';
+import TseClipPath from '@/components/ClipPath.vue';
 
 export default {
     components: {
         TseDeleteButton, TseLightingBowl, TseFingerScanning, TseScrollHeart, TseHeartFallowMouse,
-        TseLiquidDestortedImage,
+        TseLiquidDestortedImage, TseClipPath,
     },
 }
 </script>
@@ -47,6 +51,11 @@ export default {
     }
     .ScrollHeartContainer{
         overflow: hidden;
+    }
+    .row{
+        display: flex;
+        padding: 20px;
+        gap: 20px;
     }
 }
 </style>

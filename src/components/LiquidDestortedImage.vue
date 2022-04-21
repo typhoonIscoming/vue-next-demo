@@ -28,7 +28,6 @@ export default {
 
 <style lang="scss" scoped>
 .LiquidDestortedImage{
-    padding: 20px;
     .imageBox{
         position: relative;
         width: 300px;
