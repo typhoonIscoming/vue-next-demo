@@ -19,7 +19,7 @@ export default {
                 let x = el.getBoundingClientRect().left + el.clientWidth / 2;
                 let y = el.getBoundingClientRect().top + el.clientHeight / 2;
 
-                const radian = Math.atan2(event.pageX - x, event.pageY - y);
+                const radian = Math.atan2(event.clientX - x, event.clientY - y);
                 const rot = radian * (180 / Math.PI) * -1 + 270;
 
                 el.style.transform = `rotate(${rot}deg)`;
