@@ -5,6 +5,9 @@
             <TseMagicMenu />
             <TseGradientMenu />
         </div>
+        <div class="row">
+            <TseMottled />
+        </div>
         Dashboard
     </div>
 </template>
@@ -13,11 +16,12 @@
 import TseChangeImageColor from '@/components/ChangeImageColor.vue';
 import TseMagicMenu from '@/components/MagicMenu.vue';
 import TseGradientMenu from '@/components/GradientMenu.vue';
+import TseMottled from '@/components/Mottled.vue';
 
 export default {
     name: 'Dashboard',
     components: {
-        TseChangeImageColor, TseMagicMenu, TseGradientMenu,
+        TseChangeImageColor, TseMagicMenu, TseGradientMenu, TseMottled,
     },
 }
 </script>
