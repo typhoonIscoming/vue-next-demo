@@ -1,24 +1,50 @@
 <template>
     <div class="ClockContainer">
         <div class="ScrollClock">
-            <div class="column hours">
+            <div
+                class="column hours"
+                :style="{ 'font-size': sizeResult, 'line-height': sizeResult }"
+            >
                 <div v-for="item in 3" :key="item" class="num">{{ item - 1 }}</div>
             </div>
-            <div class="column hours">
+            <div
+                class="column hours"
+                :style="{ 'font-size': sizeResult, 'line-height': sizeResult }"
+            >
                 <div v-for="item in 10" :key="item" class="num">{{ item - 1 }}</div>
             </div>
-            <div class="colon"></div>
-            <div class="column miunts">
+            <div
+                class="colon"
+                :style="{ 'font-size': sizeResult, 'line-height': sizeResult }"
+            >
+            </div>
+            <div
+                class="column miunts"
+                :style="{ 'font-size': sizeResult, 'line-height': sizeResult }"
+            >
                 <div v-for="item in 6" :key="item" class="num">{{ item - 1 }}</div>
             </div>
-            <div class="column miunts">
+            <div
+                class="column miunts"
+                :style="{ 'font-size': sizeResult, 'line-height': sizeResult }"
+            >
                 <div v-for="item in 10" :key="item" class="num">{{ item - 1 }}</div>
             </div>
-            <div class="colon"></div>
-            <div class="column seconds">
+            <div
+                class="colon"
+                :style="{ 'font-size': sizeResult, 'line-height': sizeResult }"
+            >
+            </div>
+            <div
+                class="column seconds"
+                :style="{ 'font-size': sizeResult, 'line-height': sizeResult }"
+            >
                 <div v-for="item in 6" :key="item" class="num">{{ item - 1 }}</div>
             </div>
-            <div class="column seconds">
+            <div
+                class="column seconds"
+                :style="{ 'font-size': sizeResult, 'line-height': sizeResult }"
+            >
                 <div v-for="item in 10" :key="item" class="num">{{ item - 1 }}</div>
             </div>
         </div>
@@ -29,8 +55,19 @@
 /* eslint-disable no-unused-vars */
 export default {
     name: 'TseScrollClock',
+    props: {
+        size: {
+            type: Number,
+            default: 86,
+        },
+    },
+    computed: {
+        sizeResult() {
+            return `${this.size}px`
+        },
+    },
     mounted() {
-        const size = 86; // 单个数字的偏移量
+        const size = this.size; // 单个数字的偏移量
         const columns = Array.from(document.querySelectorAll('.column'));
         const classList = ['visible', 'near', 'far', 'far', 'distant', 'distant'];
         const is_24_hours_clock = true; // 是否是24小时制
@@ -80,8 +117,8 @@ export default {
     transform: translateY(-55px);
     .column,.colon{
         display: inline-block;
-        font-size: 86px;
-        line-height: 86px;
+        // font-size: 86px;
+        // line-height: 86px;
         vertical-align: top;
         transition: 0.3s;
     }
