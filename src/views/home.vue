@@ -15,6 +15,7 @@
             <TseLiquidDestortedImage />
             <TseClipPath />
             <TseEyesFallowMouse />
+            <span @click="handleToTop">回到顶部</span>
         </div>
         <TseHeartFallowMouse />
     </div>
@@ -30,11 +31,23 @@ import TseLiquidDestortedImage from '@/components/LiquidDestortedImage.vue';
 import TseClipPath from '@/components/ClipPath.vue';
 import TseEyesFallowMouse from '@/components/EyesFallowMouse.vue';
 import TseStarrySky from '@/components/StarrySky.vue';
+import { /* getVisibleTop , */ setScrollTop } from '@/utils/tool';
 
 export default {
     components: {
         TseDeleteButton, TseLightingBowl, TseFingerScanning, TseScrollHeart, TseHeartFallowMouse,
         TseLiquidDestortedImage, TseClipPath, TseEyesFallowMouse, TseStarrySky,
+    },
+    methods: {
+        handleToTop() {
+            // const home = document.querySelector('.home');
+            // console.log('home', getVisibleTop(home))
+            setScrollTop(window, 0)
+            // window.scrollTo({
+            //     top: 0,
+            //     behavior: 'smooth'
+            // })
+        },
     },
 }
 </script>

@@ -16,6 +16,7 @@ export default {
 .MenuList{
     width: 100%;
     padding: 10px;
+    box-sizing: border-box;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     .menuItem{
         text-decoration: none;

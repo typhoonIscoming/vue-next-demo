@@ -7,6 +7,7 @@
         </div>
         <div class="row">
             <TseMottled />
+            <TseScrollClock />
         </div>
         Dashboard
     </div>
@@ -17,11 +18,12 @@ import TseChangeImageColor from '@/components/ChangeImageColor.vue';
 import TseMagicMenu from '@/components/MagicMenu.vue';
 import TseGradientMenu from '@/components/GradientMenu.vue';
 import TseMottled from '@/components/Mottled.vue';
+import TseScrollClock from '@/components/ScrollClock.vue';
 
 export default {
     name: 'Dashboard',
     components: {
-        TseChangeImageColor, TseMagicMenu, TseGradientMenu, TseMottled,
+        TseChangeImageColor, TseMagicMenu, TseGradientMenu, TseMottled, TseScrollClock,
     },
 }
 </script>
