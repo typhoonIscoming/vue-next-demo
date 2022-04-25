@@ -5,9 +5,10 @@
             <TseMagicMenu />
             <TseGradientMenu />
         </div>
-        <div class="row">
+        <div class="row row2">
             <TseMottled />
             <TseScrollClock />
+            <TseWaveText />
         </div>
         Dashboard
     </div>
@@ -19,11 +20,13 @@ import TseMagicMenu from '@/components/MagicMenu.vue';
 import TseGradientMenu from '@/components/GradientMenu.vue';
 import TseMottled from '@/components/Mottled.vue';
 import TseScrollClock from '@/components/ScrollClock.vue';
+import TseWaveText from '@/components/WaveText.vue';
 
 export default {
     name: 'Dashboard',
     components: {
         TseChangeImageColor, TseMagicMenu, TseGradientMenu, TseMottled, TseScrollClock,
+        TseWaveText,
     },
 }
 </script>
@@ -35,6 +38,9 @@ export default {
         display: flex;
         padding: 10px;
         gap: 20px;
+        &.row2{
+            align-items: center;
+        }
     }
 }
 </style>
