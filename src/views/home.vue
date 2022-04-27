@@ -5,7 +5,7 @@
         </div>
         <TseStarrySky />
         <div class="BowlContainer">
-            <!-- <TseLightingBowl /> -->
+            <TseLightingBowl />
             <TseFingerScanning />
         </div>
         <div class="ScrollHeartContainer">
@@ -31,7 +31,7 @@ import TseLiquidDestortedImage from '@/components/LiquidDestortedImage.vue';
 import TseClipPath from '@/components/ClipPath.vue';
 import TseEyesFallowMouse from '@/components/EyesFallowMouse.vue';
 import TseStarrySky from '@/components/StarrySky.vue';
-import { /* getVisibleTop , */ setScrollTop } from '@/utils/tool';
+// import { /* getVisibleTop , */ setScrollTop } from '@/utils/tool';
 
 export default {
     components: {
@@ -42,11 +42,11 @@ export default {
         handleToTop() {
             // const home = document.querySelector('.home');
             // console.log('home', getVisibleTop(home))
-            setScrollTop(window, 0)
-            // window.scrollTo({
-            //     top: 0,
-            //     behavior: 'smooth'
-            // })
+            // setScrollTop(window, 0)
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
         },
     },
 }
@@ -62,9 +62,9 @@ export default {
     }
     .BowlContainer{
         display: flex;
-        padding: 20px;
+        padding: 20px 50px;
         background-color: #121212;
-        justify-content: center;
+        gap: 80px;
     }
     .ScrollHeartContainer{
         overflow: hidden;
