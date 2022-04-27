@@ -1,7 +1,7 @@
 <template>
     <div class="GlassCard">
         <div class="Card">
-
+            content
         </div>
     </div>
 </template>
@@ -53,6 +53,7 @@ export default {
         overflow: hidden;
         /* 背景模糊度 */
         backdrop-filter: blur(5px);
+        color: white;
     }
 }
 </style>
