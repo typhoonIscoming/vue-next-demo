@@ -11,7 +11,7 @@
                 class="column hours"
                 :style="{ 'font-size': sizeResult, 'line-height': sizeResult }"
             >
-                <div v-for="item in 10" :key="item" class="num">{{ item - 1 }}</div>
+                <div v-for="item in isBigger20 ? 4 : 10" :key="item" class="num">{{ item - 1 }}</div>
             </div>
             <div
                 class="colon"
@@ -61,6 +61,11 @@ export default {
             default: 86,
         },
     },
+    data() {
+        return {
+            isBigger20: false,
+        }
+    },
     computed: {
         sizeResult() {
             return `${this.size}px`
@@ -76,6 +81,7 @@ export default {
             const d = new Date();
             // 等于0时显示12点
             let hour = is_24_hours_clock ? d.getHours() : (d.getHours() % 12 || 12);
+            this.isBigger20 = hour >= 20;
             hour = (hour).toString().padStart(2, '0');
             let minuts = (d.getMinutes()).toString().padStart(2, '0');
             let seconds = (d.getSeconds()).toString().padStart(2, '0');
@@ -85,7 +91,7 @@ export default {
             return classList.find((_class, index) => i - index === n || i + index === n) || '';
         }
 
-        setInterval(() => {
+        const handleClass = () => {
             let c = getClock();
             columns.forEach((ele, i) => {
                 // 获取时分秒的每一位数，并转为整形
@@ -98,6 +104,10 @@ export default {
                     ele2.className = `num ${getClass(n, index)}`
                 })
             })
+        }
+        handleClass();
+        setInterval(() => {
+            handleClass();
         }, 1000)
     },
 }
