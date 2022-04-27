@@ -10,6 +10,7 @@
             <TseMottled />
             <TseScrollClock />
             <TseWaveText />
+            <TseGlassCard />
         </div>
         <div class="row">
             <TseSvg />
@@ -27,12 +28,13 @@ import TseScrollClock from '@/components/ScrollClock.vue';
 import TseWaveText from '@/components/WaveText.vue';
 import TseSvg from '@/components/Svg.vue';
 import TseTextSweeping from '@/components/TextSweeping.vue';
+import TseGlassCard from '@/components/GlassCard.vue';
 
 export default {
     name: 'Dashboard',
     components: {
         TseChangeImageColor, TseMagicMenu, TseGradientMenu, TseMottled, TseScrollClock,
-        TseWaveText, TseSvg, TseTextSweeping,
+        TseWaveText, TseSvg, TseTextSweeping, TseGlassCard,
     },
 }
 </script>
@@ -46,6 +48,7 @@ export default {
         gap: 20px;
         &.row2{
             align-items: center;
+            height: 300px;
         }
     }
 }
