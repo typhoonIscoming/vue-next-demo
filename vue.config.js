@@ -22,6 +22,7 @@ module.exports = defineConfig({
         name: projectName,
         resolve: {
             alias: {
+                'vue$': 'vue/dist/vue.esm-bundler.js',
                 '@': resolve('src'),
             },
             extensions: ['.js', '.vue', '.json', '.ts'],
@@ -60,7 +61,7 @@ module.exports = defineConfig({
                 options.compilerOptions = {
                     ...options.compilerOptions,
                     isCustomElement: tag => {
-                        tag.startsWith('define-')
+                        return tag.startsWith('define-') || tag.startsWith('ion-')
                     }
                 }
                 return options

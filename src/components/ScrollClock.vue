@@ -53,6 +53,9 @@
 
 <script>
 /* eslint-disable no-unused-vars */
+
+let timer = null;
+
 export default {
     name: 'TseScrollClock',
     props: {
@@ -106,9 +109,12 @@ export default {
             })
         }
         handleClass();
-        setInterval(() => {
+        timer = setInterval(() => {
             handleClass();
         }, 1000)
+    },
+    beforeUnmount() {
+        clearInterval(timer);
     },
 }
 </script>
