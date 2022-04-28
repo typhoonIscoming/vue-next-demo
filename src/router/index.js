@@ -24,6 +24,10 @@ const router = createRouter({
             path: '/dashboard',
             component: () => import(/* webpackChunkName: "dashboard" */ '@/views/dashboard'),
         },
+        {
+            path: '/Manager',
+            component: () => import(/* webpackChunkName: "Manager" */ '@/views/Manager'),
+        },
     ],
 })
 

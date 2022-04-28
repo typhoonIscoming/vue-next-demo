@@ -3,6 +3,7 @@
         <router-link to="/main" class="menuItem">Main</router-link>
         <router-link to="/home" class="menuItem">Home</router-link>
         <router-link to="/dashboard" class="menuItem">dashboard</router-link>
+        <router-link to="/manager" class="menuItem">Manager</router-link>
     </div>
 </template>
 
