@@ -15,6 +15,7 @@
         </div>
         <div class="row">
             <TseSvg />
+            <TseLikeEffect />
         </div>
         Dashboard
     </div>
@@ -31,12 +32,14 @@ import TseSvg from '@/components/Svg.vue';
 import TseTextSweeping from '@/components/TextSweeping.vue';
 import TseGlassCard from '@/components/GlassCard.vue';
 import TseAirplaneFallowMouse from '@/components/AirplaneFallowMouse.vue';
+import TseLikeEffect from '@/components/LikeEffect.vue';
 
 export default {
     name: 'Dashboard',
     components: {
         TseChangeImageColor, TseMagicMenu, TseGradientMenu, TseMottled, TseScrollClock,
         TseWaveText, TseSvg, TseTextSweeping, TseGlassCard, TseAirplaneFallowMouse,
+        TseLikeEffect,
     },
 }
 </script>
