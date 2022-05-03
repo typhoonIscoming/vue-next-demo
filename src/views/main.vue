@@ -3,6 +3,7 @@
         <div class="row">
             <TseClock />
             <TseChargingEffect />
+            <TseSunMoonAlternation />
         </div>
         <!-- <TseCircle /> -->
     </div>
@@ -12,12 +13,13 @@
 import TseClock from '@/components/clock.vue';
 import TseCircle from '@/components/circle.vue';
 import TseChargingEffect from '@/components/ChargingEffect.vue';
+import TseSunMoonAlternation from '@/components/Alternation.vue';
 
 
 export default {
     name: 'Main',
     components: {
-        TseClock, TseCircle, TseChargingEffect,
+        TseClock, TseCircle, TseChargingEffect, TseSunMoonAlternation,
     },
     mounted() {
         // class ComponentCard extends HTMLElement{
@@ -41,7 +43,9 @@ export default {
     padding: 50px;
     .row{
         display: flex;
+        flex-wrap: wrap;
         gap: 30px;
+        flex-shrink: 0;
     }
     .menu{
         background: white;

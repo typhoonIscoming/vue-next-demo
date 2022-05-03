@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "6189553",
+      "name": "sun",
+      "font_class": "sun",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
       "icon_id": "1288637",
       "name": "xingming",
       "font_class": "xingming",
