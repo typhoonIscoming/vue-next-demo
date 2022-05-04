@@ -1,6 +1,8 @@
 <template>
     <div class="root">
-        <TseMenuList />
+        <div class="menuBox">
+            <TseMenuList />
+        </div>
         <router-view />
     </div>
 </template>
@@ -26,5 +28,13 @@ html, body, #app, .root{ height: 100%; }
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
     box-sizing: border-box;
+}
+.root{
+    position: relative;
+}
+.menuBox{
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 </style>

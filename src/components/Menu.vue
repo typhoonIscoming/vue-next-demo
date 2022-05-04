@@ -19,6 +19,7 @@ export default {
     padding: 10px;
     box-sizing: border-box;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    background-color: white;
     .menuItem{
         text-decoration: none;
         color: black;

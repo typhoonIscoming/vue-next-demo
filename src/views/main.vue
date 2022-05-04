@@ -1,5 +1,8 @@
 <template>
     <div class="Main">
+        <div class="row row1">
+            <TseRadar />
+        </div>
         <div class="row">
             <TseClock />
             <TseChargingEffect />
@@ -14,12 +17,13 @@ import TseClock from '@/components/clock.vue';
 import TseCircle from '@/components/circle.vue';
 import TseChargingEffect from '@/components/ChargingEffect.vue';
 import TseSunMoonAlternation from '@/components/Alternation.vue';
+import TseRadar from '@/components/Radar.vue';
 
 
 export default {
     name: 'Main',
     components: {
-        TseClock, TseCircle, TseChargingEffect, TseSunMoonAlternation,
+        TseClock, TseCircle, TseChargingEffect, TseSunMoonAlternation, TseRadar,
     },
     mounted() {
         // class ComponentCard extends HTMLElement{
@@ -38,7 +42,6 @@ export default {
 
 <style lang="scss" scoped>
 .Main{
-    height: 100%;
     background: #2f363e;
     padding: 50px;
     .row{
@@ -46,6 +49,12 @@ export default {
         flex-wrap: wrap;
         gap: 30px;
         flex-shrink: 0;
+        &+.row{
+            margin-top: 20px;
+        }
+    }
+    .row1{
+        height: 360px;
     }
     .menu{
         background: white;
