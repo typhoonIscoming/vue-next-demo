@@ -7,6 +7,7 @@
         <div class="BowlContainer">
             <TseLightingBowl />
             <TseFingerScanning />
+            <TseBucket :percent="50" />
         </div>
         <div class="ScrollHeartContainer">
             <TseScrollHeart />
@@ -31,12 +32,13 @@ import TseLiquidDestortedImage from '@/components/LiquidDestortedImage.vue';
 import TseClipPath from '@/components/ClipPath.vue';
 import TseEyesFallowMouse from '@/components/EyesFallowMouse.vue';
 import TseStarrySky from '@/components/StarrySky.vue';
+import TseBucket from '@/components/Bucket.vue';
 // import { /* getVisibleTop , */ setScrollTop } from '@/utils/tool';
 
 export default {
     components: {
         TseDeleteButton, TseLightingBowl, TseFingerScanning, TseScrollHeart, TseHeartFallowMouse,
-        TseLiquidDestortedImage, TseClipPath, TseEyesFallowMouse, TseStarrySky,
+        TseLiquidDestortedImage, TseClipPath, TseEyesFallowMouse, TseStarrySky, TseBucket,
     },
     methods: {
         handleToTop() {

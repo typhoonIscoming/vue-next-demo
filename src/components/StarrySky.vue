@@ -53,7 +53,7 @@ export default {
         position: absolute;
         background: white;
         border-radius: 50%;
-        z-index: 1001;
+        z-index: 101;
         animation: starMove linear infinite;
     }
     .moon{
@@ -64,7 +64,7 @@ export default {
         height: 100px;
         background: #fff;
         border-radius: 50%;
-        z-index: 1000;
+        z-index: 100;
         &::after{
             content: '';
             position: absolute;
@@ -86,7 +86,7 @@ export default {
         background-size: 100% 1;
         background-position: top;
         background-repeat: repeat-x;
-        z-index: 1005;
+        z-index: 105;
     }
 }
 </style>
