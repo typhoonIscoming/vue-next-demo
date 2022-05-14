@@ -1,6 +1,9 @@
 const path = require('path');
 const { defineConfig } = require('@vue/cli-service');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const AutoImport = require('unplugin-auto-import/webpack')
+const Components = require('unplugin-vue-components/webpack')
+const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 
 const resolve = (dir) => path.join(__dirname, dir);
 
@@ -68,6 +71,12 @@ module.exports = defineConfig({
                     from: resolve('static'),
                     to: 'static'
                 }]
+            }),
+            AutoImport({
+                resolvers: [ElementPlusResolver()],
+            }),
+            Components({
+                resolvers: [ElementPlusResolver()],
             }),
         ],
     },
