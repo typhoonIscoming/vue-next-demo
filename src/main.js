@@ -1,7 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
+
 import './assets/icons/iconfont.css';
+
+import 'element-plus/es/components/button/style/css'
 
 const app = createApp(App);
 app.use(router);
