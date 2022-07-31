@@ -4,6 +4,7 @@
         <router-link to="/home" class="menuItem">Home</router-link>
         <router-link to="/dashboard" class="menuItem">dashboard</router-link>
         <router-link to="/manager" class="menuItem">Manager</router-link>
+        <router-link to="/LiveHouse" class="menuItem">LiveHouse</router-link>
     </div>
 </template>
 

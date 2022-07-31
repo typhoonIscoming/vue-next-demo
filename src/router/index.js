@@ -28,6 +28,10 @@ const router = createRouter({
             path: '/Manager',
             component: () => import(/* webpackChunkName: "Manager" */ '@/views/Manager'),
         },
+        {
+            path: '/LiveHouse',
+            component: () => import(/* webpackChunkName: "LiveHouse" */ '@/views/LiveHouse'),
+        },
     ],
 })
 
