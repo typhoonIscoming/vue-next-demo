@@ -6,7 +6,7 @@ import './assets/icons/iconfont.css';
 
 import 'element-plus/es/components/button/style/css'
 
-const app = createApp(App);
+let app = createApp(App);
 app.use(router);
 
 // 任何以 'ion-' 开头的元素都会被识别为自定义元素
@@ -18,4 +18,26 @@ app.config.compilerOptions.isCustomElement = tag => {
     return tag.startsWith('define-') || tag.startsWith('ion-')
 }
 
-app.mount('#app');
+function render() {
+    app.mount('#app');
+}
+
+if (!window.__POWERED_BY_QIANKUN__) {
+    render();
+}
+
+export async function bootstrap () {
+    console.log('[vue] vue app bootstraped')
+  }
+  
+export async function mount (props) {
+    console.log('[vue] props from main framework', props)
+    render();
+}
+  
+export async function unmount () {
+    app.$destroy()
+    app.$el.innerHTML = ''
+    app = null
+}
+
