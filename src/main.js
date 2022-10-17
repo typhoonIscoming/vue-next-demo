@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia';
 import App from './App.vue'
 import router from './router';
 
@@ -7,7 +8,9 @@ import './assets/icons/iconfont.css';
 import 'element-plus/es/components/button/style/css'
 
 let app = createApp(App);
+const pinia = createPinia();
 app.use(router);
+app.use(pinia);
 
 // 任何以 'ion-' 开头的元素都会被识别为自定义元素
 // 在 Vue 3.x 中，对自定义元素是否是组件名的检查已经移动到模板编译阶段执行。所以，
