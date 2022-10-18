@@ -4,7 +4,7 @@
             <ScaleInputText />
         </div>
         <div>
-            current count's value * 2 equal {{ getCount }}.
+            count's value * 2 equal {{ getCount }}.
             <ElButton @click="handleIncrement">increment</ElButton>
             <ElButton @click="handleChangeDirectly">change data directly</ElButton>,
             <span>count value is {{ count }}</span>
@@ -46,7 +46,6 @@ export default {
         ...mapActions(indexStore, ['increment']),
         handleChangeDirectly() {
             this.store.count += 1
-            console.log('this', this.store.count)
         },
         handleChangeByPatch() {
             const random = Math.trunc(Math.random() * 4 + 1);
