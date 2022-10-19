@@ -12,6 +12,10 @@
             <span>mapActions -> random value {{ randomValue }}</span>
             <ElButton @click="useMapActions">change data by mapActions</ElButton>
         </div>
+        <div>
+            count minus 1 equal {{ count }}
+            <ElButton @click="handleMinus">minus</ElButton>
+        </div>
     </div>
 </template>
 
@@ -58,6 +62,9 @@ export default {
             const result = random < 0.5 ? Math.trunc((-1 - random) * 4) : Math.trunc(random * 4 + 1);
             this.randomValue = result;
             this.increment(result)
+        },
+        handleMinus() {
+            this.increment(-1)
         },
     },
 }

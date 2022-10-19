@@ -361,7 +361,8 @@ export default {
             });
 
             let count = 2;
-            // console.log(valStack)
+            console.log('valStack', valStack);
+            console.log('cardItemList', this.cardItemList);
             valStack.forEach((list) => {
                 list &&
                     list.forEach((item) => {
