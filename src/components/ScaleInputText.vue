@@ -62,6 +62,7 @@ export default {
         }
         .InputAnimate{
             animation: print 0.2s ease-in-out;
+            color: black;
         }
     }
     .shake{

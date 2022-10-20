@@ -5,10 +5,12 @@ import router from './router';
 
 import './assets/icons/iconfont.css';
 
-import 'element-plus/es/components/button/style/css'
+import 'element-plus/es/components/button/style/css';
+import piniaPlugin from './store/plugin';
 
 let app = createApp(App);
 const pinia = createPinia();
+pinia.use(piniaPlugin);
 app.use(router);
 app.use(pinia);
 
