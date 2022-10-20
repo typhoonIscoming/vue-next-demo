@@ -6,11 +6,13 @@ import router from './router';
 import './assets/icons/iconfont.css';
 
 import 'element-plus/es/components/button/style/css';
-import piniaPlugin from './store/plugin';
+import piniaGlobalPlugin from './store/plugins/global';
+import piniaDebouncePlugin from './store/plugins/debouncePlugin';
 
 let app = createApp(App);
 const pinia = createPinia();
-pinia.use(piniaPlugin);
+pinia.use(piniaGlobalPlugin);
+pinia.use(piniaDebouncePlugin);
 app.use(router);
 app.use(pinia);
 
