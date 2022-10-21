@@ -25,7 +25,10 @@ import { ref } from 'vue';
 import { storeToRefs, mapActions } from 'pinia';
 import indexStore from '@/store';
 import userStore from '@/store/user';
-
+/**
+ * setup是vue3新增的生命周期函数，setup的加入就是为了让vue3使用组合式API（Composition API）。
+ * 使用组合式API更符合大型项目的开发，通过setup可以将该部分抽离成函数,让其他开发者就不用关心该部分逻辑。
+ **/
 export default {
     setup() {
         // 值得注意的是 indexStore 是一个方法，调用之后会给我们返回一个对象。

@@ -3,7 +3,7 @@
         <div class="Left">
             <ScaleInputText />
         </div>
-        <PricticeStore />
+        <PricticeStore ref="prictiseStore" />
     </div>
 </template>
 
@@ -16,6 +16,9 @@ export default {
     name: 'Manager',
     components: {
         ElButton, ScaleInputText, PricticeStore,
+    },
+    mounted() {
+        console.log('===', this.$refs.prictiseStore)
     },
 }
 </script>
