@@ -8,8 +8,6 @@
             <ElButton @click="handleChangeByPatch">change data by $patch</ElButton>
             <span>mapActions -> random value {{ randomValue }}</span>
             <ElButton @click="useMapActions">change data by mapActions</ElButton>
-        </div>
-        <div>
             count minus 1 equal {{ count }}
             <ElButton @click="handleMinus">minus</ElButton>
         </div>

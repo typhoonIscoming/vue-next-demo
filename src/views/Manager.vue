@@ -29,9 +29,6 @@ export default {
             timeout: 3000,
         }),
     },
-    mounted() {
-        console.log('===', this.$refs.prictiseStore)
-    },
 }
 </script>
 

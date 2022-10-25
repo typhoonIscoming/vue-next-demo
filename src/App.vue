@@ -3,22 +3,25 @@
         <div class="menuBox">
             <TseMenuList />
         </div>
-        <router-view />
+        <Wrapper>
+            <router-view />
+        </Wrapper>
     </div>
 </template>
 
 <script>
 import TseMenuList from '@/components/Menu.vue';
+import Wrapper from '@/modules/Wrapper.vue';
 
 export default {
     name: 'App',
     components: {
-        TseMenuList,
+        TseMenuList, Wrapper,
     },
 };
 </script>
 
-<style>
+<style lang="scss">
 @import url('http://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 *{ margin: 0; padding: 0; }
 html, body, #app, .root{ height: 100%; }
