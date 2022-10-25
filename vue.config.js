@@ -45,6 +45,7 @@ module.exports = defineConfig({
             alias: {
                 'vue$': 'vue/dist/vue.esm-bundler.js',
                 '@': resolve('src'),
+                'components': resolve('src/components'),
             },
             extensions: ['.js', '.vue', '.json', '.ts'],
         },
