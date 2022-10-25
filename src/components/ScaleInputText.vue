@@ -42,7 +42,6 @@ export default {
 .ScaleInputText{
     display: inline-block;
     .InputBox{
-        position: relative;
         input{
             opacity: 0;
             &:focus ~ label{
@@ -63,6 +62,9 @@ export default {
         .InputAnimate{
             animation: print 0.2s ease-in-out;
             color: black;
+            z-index: 999;
+            width: fit-content;
+            height: fit-content;
         }
     }
     .shake{
@@ -71,8 +73,9 @@ export default {
 }
 @keyframes print{
     0%{
+        transform: scale(6);
         position: absolute;
-        transform: scale(50);
+        margin: auto;
     }
     99%{
         position: absolute;
